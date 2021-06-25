@@ -35,8 +35,8 @@ tz = timezone(timedelta(hours=+9), 'JST')
 # 天気を3種に分類する関数
 def judge(weather, wind_speed):
     if (weather == 'Clear') or (weather == 'Clouds'):
-        if wind_speed > 15:
-            msg = '\n' + jst + ' 強風'
+        if wind_speed > 10:
+            msg = '\n' + jst + ' 風速10m/s超'
         else:
             msg = '\n' + jst + ' OK'
     else:
